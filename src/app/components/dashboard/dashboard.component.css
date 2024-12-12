@@ -1,0 +1,167 @@
+/* Reset margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Center content with flexbox */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Initial gradient */
+  animation: backgroundColorAnimation 8s infinite alternate; /* Infinite animation */
+}
+
+/* Keyframe for background animation */
+@keyframes backgroundColorAnimation {
+  0% {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  }
+  100% {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  }
+}
+/* Style the dashboard container */
+.dashboard {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Keyframe animations for the dashboard */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Heading styles */
+.dashboard h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2b5876;
+  animation: textGlow 2s infinite alternate; /* Glow animation for text */
+}
+
+/* Keyframe for heading glow */
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px rgba(43, 88, 118, 0.8);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(43, 88, 118, 1);
+  }
+}
+
+/* Form styles */
+form {
+  margin-bottom: 2rem;
+  animation: slideInLeft 0.8s ease-out; /* Slide-in animation */
+}
+
+/* Keyframe for sliding in the form */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2b5876;
+  outline: none;
+  box-shadow: 0 0 10px rgba(43, 88, 118, 0.5);
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  background: #2b5876;
+  color: #ffffff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  animation: bounce 1.5s infinite; /* Button bounce animation */
+}
+
+/* Keyframe for bouncing button */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+button:hover {
+  background: #4e8fa8;
+  transform: scale(1.05);
+}
+
+/* Result box */
+.result {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #2b5876;
+  animation: fadeIn 1s ease-out 0.5s; /* Fade-in delay for the result */
+}
+
+.result h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: bold;
+}
