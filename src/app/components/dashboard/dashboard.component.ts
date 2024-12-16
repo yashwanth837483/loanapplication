@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
@@ -18,7 +16,7 @@ export class DashboardComponent {
     if (this.name.trim()) {
       this.customerService.getEligibilityStatus(this.name).subscribe(
         (response) => {
-          this.eligibilityStatus = response; // Update the response
+          this.eligibilityStatus = response; // Update the response with the string value
         },
         (error) => {
           console.error('Error fetching eligibility status:', error);
